@@ -1,0 +1,7 @@
+{
+  "name": "uic-mobile-app-concept",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
