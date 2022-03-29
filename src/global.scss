@@ -24,3 +24,30 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.ion-color-uic1 {
+    --ion-color-base: var(--ion-color-uic1);
+    --ion-color-base-rgb: var(--ion-color-uic1-rgb);
+    --ion-color-contrast: var(--ion-color-uic1-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-uic1-contrast-rgb);
+    --ion-color-shade: var(--ion-color-uic1-shade);
+    --ion-color-tint: var(--ion-color-uic1-tint);
+  }
+.ion-color-uic2 {
+    --ion-color-base: var(--ion-color-uic2);
+    --ion-color-base-rgb: var(--ion-color-uic2-rgb);
+    --ion-color-contrast: var(--ion-color-uic2-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-uic2-contrast-rgb);
+    --ion-color-shade: var(--ion-color-uic2-shade);
+    --ion-color-tint: var(--ion-color-uic2-tint);
+  }
