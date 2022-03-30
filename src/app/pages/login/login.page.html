@@ -28,7 +28,7 @@
           <!-- password field -->
           <ion-item>
             <ion-label position="floating"> password </ion-label>
-            <ion-input type="email" formControlName="password"></ion-input>
+            <ion-input type="password" formControlName="password"></ion-input>
           </ion-item>
           <!-- password error message -->
           <app-error-message
@@ -55,6 +55,7 @@
             size="default"
             (click)="login()"
             [disabled]="!form.valid"
+            id="loginButton"
           >
             login
           </ion-button>
