@@ -123,7 +123,7 @@ describe('LoginPage', () => {
     spyOn(router, 'navigate');
     // spyOn(authService, 'login').and.returnValue(of(new User()));
     fixture.detectChanges();
-    store.dispatch(login());
+    store.dispatch(login({email: 'valid@email.com', password: 'anyPassword'}));
     store.dispatch(loginSuccess({ user: new User() }));
     // component.form.get('email').setValue('valid@email.com');
     // component.form.get('password').setValue('anyPassword');
@@ -141,7 +141,7 @@ describe('LoginPage', () => {
     // spyOn(authService, 'login').and.returnValue(throwError({message: 'error'}));
     spyOn(toastController, 'create').and.returnValue(<any>Promise.resolve({ present: () => {} }));
     fixture.detectChanges();
-    store.dispatch(login());
+    store.dispatch(login({email: 'valid@email.com', password: 'anyPassword'}));
     store.dispatch(loginFail({ error: { message: 'error message' } }));
     // component.form.get('email').setValue('error@email.com');
     // component.form.get('password').setValue('anyPassword');

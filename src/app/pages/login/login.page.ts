@@ -119,7 +119,7 @@ export class LoginPage implements OnInit, OnDestroy {
     // }, 3000);
   }
   login() {
-    this.store.dispatch(login());
+    this.store.dispatch(login({email: this.form.get('email').value, password: this.form.get('password').value}));
   }
   register() {
     this.router.navigate(['register']);
