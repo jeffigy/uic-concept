@@ -151,4 +151,10 @@ describe('LoginPage', () => {
     });
     expect(toastController.create).toHaveBeenCalledTimes(1);
   });
+
+  it('should redirect to register page', () => {
+    spyOn(router, 'navigate');
+    component.register();
+    expect(router.navigate).toHaveBeenCalledOnceWith(['register']);
+  });
 });

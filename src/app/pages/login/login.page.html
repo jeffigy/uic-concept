@@ -63,7 +63,9 @@
           color="uic2" 
           expand="block" 
           fill="clear" 
-          size="default">
+          size="default"
+          (click)="register()"
+          >
             Register
           </ion-button>
           <ion-button color="uic" expand="block" fill="clear">
@@ -74,56 +76,5 @@
       </ion-card-content>
     </ion-card>
   </div>
-  <!-- <form class="login-container" [FormGroup]="form">
-    <img
-      alt="image"
-      src="http://www.uic.edu.ph/wp-content/uploads/2014/09/uic-logo2.png"
-    />
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-label color="uic2" position="floating"
-              >Student Email</ion-label
-            >
-            <ion-input type="email" formControlName="email" ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label color="uic2" position="floating">Password</ion-label>
-            <ion-input type="password" formControlName="password"></ion-input>
-          </ion-item>
-          <ion-button color="dark" fill="clear" size="full" [disabled]="!form.get('email').valid">
-            forgot password
-          </ion-button>
-          <ion-button
-            color="uic2"
-            expand="block"
-            size="default"
-            (click)="login()"
-            [disabled]="!form.valid"
-          >
-            Login
-          </ion-button>
-          <ion-button
-            color="uic2"
-            expand="block"
-            fill="outline"
-            size="default"
-            (click)="register()"
-          >
-          Register
-          </ion-button>
-          <ion-button
-            color="uic"
-            expand="block"
-            
-            fill="outline"
-          >
-            <ion-icon name="logo-google"></ion-icon>
-            Continue with Google
-          </ion-button> --
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  </form> -->
+ 
 </ion-content>
