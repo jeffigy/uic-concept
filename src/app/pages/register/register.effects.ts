@@ -2,14 +2,6 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import {
-  login,
-  loginFail,
-  loginSuccess,
-  recoverPassword,
-  recoverPasswordFail,
-  recoverPasswordSuccess,
-} from 'src/store/login/login.actions';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { of } from 'rxjs';
@@ -26,7 +18,7 @@ export class RegisterEffects {
       switchMap((payload: { userRegister: UserRegister }) =>
         this.authService.register(payload.userRegister).pipe(
           map(() => registerSuccess()),
-          catchError((error) => of(registerFail({ error })))
+          catchError(error => of(registerFail({ error })))
         )
       )
     )

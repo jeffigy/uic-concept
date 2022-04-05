@@ -2,6 +2,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    // "forceConsistentCasingInFileNames": true,
+    // "strict": true,
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
