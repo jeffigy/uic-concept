@@ -29,16 +29,13 @@ export class LoginPage implements OnInit, OnDestroy {
     private store: Store<AppState>,
     private toastController: ToastController,
     private navController: NavController
-    // private authService: AuthService
   ) {}
 
   ngOnInit() {
     this.form = new LoginPageForm(this.formBuilder).createForm();
     this.loginStateSubscription = this.store.select('login').subscribe(async (loginState) => {
         this.onIsRecoveredPassword(loginState);
-        // this.onIsRecoveringPassword(loginState);
         this.onError(loginState);
-        // this.onIsLoggingIn(loginState);
         this.onIsLoggedIn(loginState);
         this.toggleLoading(loginState);
       });
@@ -60,7 +57,7 @@ export class LoginPage implements OnInit, OnDestroy {
 
   private onIsLoggedIn(loginState: LoginState) {
     if(loginState.isLoggedIn){
-      this.navController.navigateRoot(['home']);
+      this.navController.navigateRoot('home');
     }
   }
 
